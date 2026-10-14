@@ -16,6 +16,7 @@ data={"Họ và tên": ["Nguyễn Văn An","Trần Thị Bình", "Nguyễn Đứ
       "Cuối kỳ": [9, 6, 9, 8, 9, 10, 10, 8, 9, 8],
       "Tên": ["An", "Bình","Trí", "Giang", "Đức", "Long", "Yến", "Khánh", "Quang", "Thương" ]}
 df = pd.DataFrame(data)
+df.index=range(1, len(df)+1)
 df["Tổng kết"]=(0.2*df["Chuyên cần"]+0.3*df["Giữa kỳ"]+0.5*df["Cuối kỳ"])
 df["Tổng kết"]=df["Tổng kết"].round(2)
 def phan_loai(diem):
